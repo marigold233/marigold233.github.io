@@ -788,7 +788,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nginx_2" class="md-nav__link">
+  <a href="#nginx" class="md-nav__link">
     <span class="md-ellipsis">
       NGINX
     </span>
@@ -798,7 +798,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#nginx_3" class="md-nav__link">
+  <a href="#nginx_1" class="md-nav__link">
     <span class="md-ellipsis">
       通过信号控制NGINX
     </span>
@@ -1628,7 +1628,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nginx_2" class="md-nav__link">
+  <a href="#nginx" class="md-nav__link">
     <span class="md-ellipsis">
       NGINX
     </span>
@@ -1638,7 +1638,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#nginx_3" class="md-nav__link">
+  <a href="#nginx_1" class="md-nav__link">
     <span class="md-ellipsis">
       通过信号控制NGINX
     </span>
@@ -2064,7 +2064,6 @@
 <a id="__codelineno-11-38" name="__codelineno-11-38"></a>service<span class="w">  </span>iptables<span class="w">  </span>restart
 </code></pre></div></td></tr></table></div>
 <h3 id="_5">防火墙规则<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<h4 id="nginx">内网nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -2097,7 +2096,6 @@
 <a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="c1"># END</span>
 <a id="__codelineno-12-16" name="__codelineno-12-16"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>all<span class="w"> </span>-s<span class="w"> </span>any/0<span class="w"> </span>-j<span class="w"> </span>DROP
 </code></pre></div></td></tr></table></div>
-<h4 id="nginx_1">公网nginx<a class="headerlink" href="#nginx_1" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
@@ -2632,8 +2630,8 @@
 <h2 id="_10">随机生成密码<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>tr<span class="w"> </span>-dc<span class="w"> </span><span class="s1">&#39;A-Za-z0-9_!@#$%^&amp;*()-+=&#39;</span><span class="w"> </span>&lt;<span class="w"> </span>/dev/urandom<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-c<span class="w"> </span><span class="m">12</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="nginx_2">NGINX<a class="headerlink" href="#nginx_2" title="Permanent link">&para;</a></h2>
-<h3 id="nginx_3">通过信号控制NGINX<a class="headerlink" href="#nginx_3" title="Permanent link">&para;</a></h3>
+<h2 id="nginx">NGINX<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h2>
+<h3 id="nginx_1">通过信号控制NGINX<a class="headerlink" href="#nginx_1" title="Permanent link">&para;</a></h3>
 <p>NGINX默认master进程pid文件在~~/usr/local/nginx/logs/nginx.pid~~，我的Mint在<code>/var/run/nginx.pid</code>
 ![[Snipaste_2023-07-12_14-17-01.png]]
 主进程支持以下信号：</p>
@@ -2649,7 +2647,7 @@
 <li>重新打开日志文件</li>
 <li>WINCH：终止异常调试（需要启用debug_points）</li>
 </ul>
-<h4 id="nginx_4">更改nginx配置<a class="headerlink" href="#nginx_4" title="Permanent link">&para;</a></h4>
+<h4 id="nginx_2">更改nginx配置<a class="headerlink" href="#nginx_2" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
 <span class="normal"><a href="#__codelineno-30-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>ps<span class="w"> </span>axw<span class="w"> </span>-o<span class="w"> </span>pid,ppid,user,%cpu,vxz,wchan,command<span class="w"> </span><span class="p">|</span><span class="w"> </span>egrep<span class="w"> </span><span class="s1">&#39;(nginx|PID)&#39;</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="nb">kill</span><span class="w"> </span>-HUP<span class="w"> </span><span class="m">33126</span>
