@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - systemd</title>
+    <link rel="self" type="application/atom+xml" href="https://marigold233.github.io/tags/systemd/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://marigold233.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-12-08T00:00:00+00:00</updated>
+    <id>https://marigold233.github.io/tags/systemd/atom.xml</id>
+    <entry xml:lang="en">
+        <title>用systemd托管java程序</title>
+        <published>2024-12-08T00:00:00+00:00</published>
+        <updated>2024-12-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://marigold233.github.io/posts/yong-systemdtuo-guan-javacheng-xu/"/>
+        <id>https://marigold233.github.io/posts/yong-systemdtuo-guan-javacheng-xu/</id>
+        
+        <content type="html" xml:base="https://marigold233.github.io/posts/yong-systemdtuo-guan-javacheng-xu/">&lt;h2 id=&quot;qian-ti&quot;&gt;前提&lt;&#x2F;h2&gt;
+&lt;p&gt;普通用户自定义的systemd unit文件可以放在&lt;code&gt;~&#x2F;.config&#x2F;systemd&#x2F;user&#x2F;&lt;&#x2F;code&gt;下，那么我们需要创建这个文件夹并把单元放到此处。&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#6c7079;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;mkdir -p ~&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;&#x2F;.config&#x2F;systemd&#x2F;user&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#5ebfcc;&quot;&gt;cd &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;&#x2F;.config&#x2F;systemd&#x2F;user&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;fang-shi-yi-wan-quan-yong-systemd&quot;&gt;方式一 完全用systemd&lt;&#x2F;h2&gt;
+&lt;details open&gt;
+&lt;summary&gt;&lt;b&gt;&lt;code&gt;javademo-spring.service&lt;&#x2F;code&gt;&lt;&#x2F;b&gt;&lt;&#x2F;summary&gt;
+&lt;pre data-lang=&quot;ini&quot; style=&quot;background-color:#2b303b;color:#6c7079;&quot; class=&quot;language-ini &quot;&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span style=&quot;color:#cd74e8;&quot;&gt;[Unit]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;Description&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;Java Demo Spring Application
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;After&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;network&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;target
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cd74e8;&quot;&gt;[Service]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;Type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;simple
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5f697a;&quot;&gt;#User=qing
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5f697a;&quot;&gt;#Group=qing
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;WorkingDirectory&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;home&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;qing&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;javademo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;spring
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;ExecStartPre&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;bin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;mkdir &lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;p &lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;home&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;qing&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;javademo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;spring&#x2F;logs
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;Environment&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9acc76;&quot;&gt;&amp;quot;JAVA_HOME=&#x2F;opt&#x2F;jdk-21.0.4&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5f697a;&quot;&gt;# JVM 配置
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;Environment&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9acc76;&quot;&gt;&amp;quot;JAVA_OPTS=-Xms4g -Xmx4g -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=&#x2F;home&#x2F;qing&#x2F;javademo-spring&#x2F;logs -XX:+UseG1GC -Xlog:gc*:file=&#x2F;home&#x2F;qing&#x2F;javademo-spring&#x2F;logs&#x2F;javademo-spring-gc.log:time,uptime:filecount=5,filesize=20M&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5f697a;&quot;&gt;# 应用配置
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;Environment&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#9acc76;&quot;&gt;&amp;quot;APP_OPTS=-Dlog.days=7 -Dlog.dir=&#x2F;home&#x2F;qing&#x2F;javademo-spring&#x2F;logs&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;ExecStart&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;bin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;bash &lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;c &lt;&#x2F;span&gt;&lt;span style=&quot;color:#9acc76;&quot;&gt;&amp;quot;${JAVA_HOME}&#x2F;bin&#x2F;java ${JAVA_OPTS} ${APP_OPTS} -jar app.jar&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;ExecStop&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;bin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;kill &lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;s TERM &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cd74e8;&quot;&gt;$MAINPID
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;Restart&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;on&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;failure
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;RestartSec&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#db9d63;&quot;&gt;10
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;StartLimitInterval&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#db9d63;&quot;&gt;60s
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;StartLimitBurst&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#db9d63;&quot;&gt;5
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;LimitNOFILE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#db9d63;&quot;&gt;65536
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;StandardOutput&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;:&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;home&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;qing&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;javademo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;spring&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;logs&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;javademo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;spring&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;log
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;StandardError&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;:&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;home&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;qing&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;javademo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;spring&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;logs&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;javademo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;spring&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;log
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;SuccessExitStatus&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#db9d63;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cd74e8;&quot;&gt;[Install]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;WantedBy&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;multi&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;target
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;details&gt;
+&lt;p&gt;然后重载systemd：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#6c7079;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;systemctl --user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt; daemon-reload
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;systemctl --user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt; start javademo-spring
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;fang-shi-er-yong-qi-dong-jiao-ben&quot;&gt;方式二 用启动脚本&lt;&#x2F;h2&gt;
+&lt;p&gt;这种方式要配合脚本来实现，之前写过&lt;strong&gt;java程序启动脚本&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;details open&gt;
+&lt;summary&gt;&lt;b&gt;&lt;code&gt;javademo-spring-script.service&lt;&#x2F;code&gt;&lt;&#x2F;b&gt;&lt;&#x2F;summary&gt;
+&lt;pre data-lang=&quot;ini&quot; style=&quot;background-color:#2b303b;color:#6c7079;&quot; class=&quot;language-ini &quot;&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span style=&quot;color:#cd74e8;&quot;&gt;[Unit]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;Description&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;Java Demo Spring Application
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;After&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;network&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;target
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cd74e8;&quot;&gt;[Service]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;Type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;forking
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5f697a;&quot;&gt;#User=qing
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5f697a;&quot;&gt;#Group=qing
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;WorkingDirectory&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;home&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;qing&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;javademo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;spring
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;ExecStart&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;bin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;bash javaapp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;start&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;v2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;sh &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cd74e8;&quot;&gt;start
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;ExecStop&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;bin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;bash javaapp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;start&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;v2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;sh &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cd74e8;&quot;&gt;stop
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;Restart&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;on&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;failure
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;RestartSec&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#db9d63;&quot;&gt;10
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;StartLimitInterval&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#db9d63;&quot;&gt;60s
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;StartLimitBurst&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#db9d63;&quot;&gt;5
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;LimitNOFILE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#db9d63;&quot;&gt;65536
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5f697a;&quot;&gt;#StandardOutput=append:&#x2F;home&#x2F;qing&#x2F;javademo-spring&#x2F;logs&#x2F;javademo-spring.log
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#5f697a;&quot;&gt;#StandardError=append:&#x2F;home&#x2F;qing&#x2F;javademo-spring&#x2F;logs&#x2F;javademo-spring.error.log
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;SuccessExitStatus&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#db9d63;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cd74e8;&quot;&gt;[Install]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eb6772;&quot;&gt;WantedBy&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;multi&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;user&lt;&#x2F;span&gt;&lt;span style=&quot;color:#adb7c9;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#abb2bf;&quot;&gt;target
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;details&gt;
+&lt;h2 id=&quot;jian-yi&quot;&gt;建议&lt;&#x2F;h2&gt;
+&lt;p&gt;在生产环境推荐设置成&lt;code&gt;Restart=always&lt;&#x2F;code&gt;，适当调整重启&lt;code&gt;RestartSec&lt;&#x2F;code&gt;参数。&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

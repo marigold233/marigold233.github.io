@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  <link href='&#x2F;icons&#x2F;site.webmanifest' rel="manifest" />
+  
+  
+  <link color="#5bbad5" href='&#x2F;icons&#x2F;safari-pinned-tab.svg' rel="mask-icon" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-16x16.png' rel="icon" sizes="16x16" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;favicon-32x32.png' rel="icon" sizes="32x32" type="image/png" />
+  
+  
+  <link href='&#x2F;icons&#x2F;apple-touch-icon.png' rel="apple-touch-icon" sizes="180x180" />
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.css" integrity="sha384-+rY0QD+LRnTOquDMzGa9lXU6jIwdiQuwCJQ2cdcW0qeP/0UbjQCZlXnRsUMA+9pH" crossorigin="anonymous">
+  
+
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.1/css/academicons.min.css" integrity="sha384-FIue+PI4SsI9XfHCz8dBLg33b0c1fMJgNU3X//L26FYbGnlSEfWmNT7zgWc2N9b6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link href="https://marigold233.github.io/deep-thought.css" rel="stylesheet" />
+  
+  
+
+  <title>
+    
+ | java程序启动脚本
+
+  </title>
+
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/mathtex-script-type.min.js" integrity="sha384-jiBVvJ8NGGj5n7kJaiWwWp9AjC+Yh8rhZY3GtAX8yU28azcLgoRo4oukO87g7zDT" crossorigin="anonymous"></script>
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+  
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;marigold233.github.io"></a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;marigold233.github.io&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;marigold233.github.io&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;marigold233.github.io&#x2F;weekly-report">
+            WeeklyReport
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;marigold233.github.io&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;marigold233.github.io&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <article class="box">
+          <h1 class="title">
+            java程序启动脚本
+          </h1>
+          <p class="subtitle"></p>
+          <div class="columns is-multiline is-gapless">
+            <div class="column is-8">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="fas fa-user"></i>
+  </span>
+  <span>Capy published on</span>
+  <span class="icon">
+    <i class="far fa-calendar-alt"></i>
+  </span>
+  <span><time datetime="2024-12-08">December 08, 2024</time></span>
+</span>
+
+            </div>
+            <div class="column is-4 has-text-right-desktop">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="far fa-clock"></i>
+  </span>
+  <span>1 min,</span>
+  <span class="icon">
+    <i class="fas fa-pencil-alt"></i>
+  </span>
+  <span>74 words</span>
+</span>
+
+            </div>
+            <div class="column">
+              
+              
+<p>
+  Categories:
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://marigold233.github.io/categories/ji-shu/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-cube"></i>
+      </span>
+      <span>技术</span>
+    </span>
+  </a>
+  
+</p>
+
+              
+            </div>
+            <div class="column has-text-right-desktop">
+              
+              
+<p>
+  Tags:
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://marigold233.github.io/tags/linux/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>Linux</span>
+    </span>
+  </a>
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://marigold233.github.io/tags/java/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>java</span>
+    </span>
+  </a>
+  
+  <a class="has-text-info-dark has-text-weight-semibold" href="https://marigold233.github.io/tags/script/">
+    <span class="icon-text">
+      <span class="icon">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>script</span>
+    </span>
+  </a>
+  
+</p>
+
+              
+            </div>
+          </div>
+          <div class="content mt-2">
+            <p>原先自己写的java应用启动脚本，现在用AI优化了一下：</p>
+<details open>
+<summary><b><code>javaapp-start.sh</code></b></summary>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="font-style:italic;color:#5f697a;">#!/usr/bin/env bash
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 脚本基础配置
+</span><span style="color:#cd74e8;">declare </span><span style="color:#eb6772;">-r SCRIPT_DIR</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">$(</span><span style="color:#5ebfcc;">cd </span><span style="color:#9acc76;">&quot;$(</span><span style="color:#eb6772;">dirname </span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">BASH_SOURCE[</span><span style="color:#db9d63;">0</span><span style="color:#eb6772;">]</span><span style="color:#9acc76;">}&quot;)&quot; </span><span style="color:#adb7c9;">&amp;&amp; </span><span style="color:#eb6772;">pwd</span><span style="color:#9acc76;">)
+</span><span style="color:#cd74e8;">declare </span><span style="color:#eb6772;">-r APP_HOME</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;$</span><span style="color:#eb6772;">SCRIPT_DIR</span><span style="color:#9acc76;">&quot;
+</span><span style="color:#cd74e8;">declare </span><span style="color:#eb6772;">-r APP_NAME</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;javademo-spring&quot;
+</span><span style="color:#cd74e8;">declare </span><span style="color:#eb6772;">-r JAR_NAME</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;app.jar&quot;
+</span><span style="color:#cd74e8;">declare </span><span style="color:#eb6772;">-r JAR_PATH</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">APP_HOME</span><span style="color:#9acc76;">}/${</span><span style="color:#eb6772;">JAR_NAME</span><span style="color:#9acc76;">}&quot;
+</span><span style="color:#cd74e8;">declare </span><span style="color:#eb6772;">-r LOG_DIR</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">APP_HOME</span><span style="color:#9acc76;">}/logs&quot;
+</span><span style="color:#cd74e8;">declare </span><span style="color:#eb6772;">-r GC_LOG_FILE</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">LOG_DIR</span><span style="color:#9acc76;">}/${</span><span style="color:#eb6772;">APP_NAME</span><span style="color:#9acc76;">}-gc.log&quot;
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 应用配置
+</span><span style="font-style:italic;color:#5f697a;"># java 9+
+</span><span style="color:#cd74e8;">declare </span><span style="color:#eb6772;">-r JVM_OPTS</span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;">(
+</span><span style="color:#abb2bf;">    </span><span style="color:#9acc76;">&quot;-Xms4g&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#9acc76;">&quot;-Xmx4g&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#9acc76;">&quot;-XX:+HeapDumpOnOutOfMemoryError&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#9acc76;">&quot;-XX:HeapDumpPath=${</span><span style="color:#eb6772;">LOG_DIR</span><span style="color:#9acc76;">}&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#9acc76;">&quot;-XX:+UseG1GC&quot;
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;"># GC日志参数 (Java 9+ 的写法)
+</span><span style="color:#abb2bf;">    </span><span style="color:#9acc76;">&quot;-Xlog:gc*:file=${</span><span style="color:#eb6772;">GC_LOG_FILE</span><span style="color:#9acc76;">}:time,uptime:filecount=5,filesize=20M&quot;
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;"># 或者用下面这种更详细的方式
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;">#&quot;-Xlog:gc*=info:file=${GC_LOG_FILE}:time,uptime,level,tags:filecount=5,filesize=20M&quot;
+</span><span style="color:#abb2bf;">)
+</span><span style="font-style:italic;color:#5f697a;"># java 8
+</span><span style="font-style:italic;color:#5f697a;"># declare -r JVM_OPTS=(
+</span><span style="font-style:italic;color:#5f697a;">#     &quot;-Xms4g&quot;
+</span><span style="font-style:italic;color:#5f697a;">#     &quot;-Xmx4g&quot;
+</span><span style="font-style:italic;color:#5f697a;">#     &quot;-XX:+HeapDumpOnOutOfMemoryError&quot;
+</span><span style="font-style:italic;color:#5f697a;">#     &quot;-XX:HeapDumpPath=${LOG_DIR}&quot;
+</span><span style="font-style:italic;color:#5f697a;">#     &quot;-XX:+UseG1GC&quot;
+</span><span style="font-style:italic;color:#5f697a;">#     &quot;-XX:+PrintGCDetails&quot;
+</span><span style="font-style:italic;color:#5f697a;">#     &quot;-XX:+PrintGCDateStamps&quot;
+</span><span style="font-style:italic;color:#5f697a;">#     &quot;-Xloggc:${GC_LOG_FILE}&quot;
+</span><span style="font-style:italic;color:#5f697a;">#     &quot;-XX:+UseGCLogFileRotation&quot;
+</span><span style="font-style:italic;color:#5f697a;">#     &quot;-XX:NumberOfGCLogFiles=5&quot;
+</span><span style="font-style:italic;color:#5f697a;">#     &quot;-XX:GCLogFileSize=20M&quot;
+</span><span style="font-style:italic;color:#5f697a;"># )
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">declare </span><span style="color:#eb6772;">-r APP_OPTS</span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;">(
+</span><span style="color:#abb2bf;">    </span><span style="color:#9acc76;">&quot;-Dlog.days=7&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#9acc76;">&quot;-Dlog.dir=${</span><span style="color:#eb6772;">LOG_DIR</span><span style="color:#9acc76;">}&quot;
+</span><span style="color:#abb2bf;">)
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 日志配置
+</span><span style="color:#cd74e8;">declare </span><span style="color:#eb6772;">-rA LOG_COLORS</span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;">(
+</span><span style="color:#abb2bf;">    [DEBUG]</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;\033[36m&quot;
+</span><span style="color:#abb2bf;">    [INFO]</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;\033[32m&quot;
+</span><span style="color:#abb2bf;">    [WARN]</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;\033[33m&quot;
+</span><span style="color:#abb2bf;">    [ERROR]</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;\033[31m&quot;
+</span><span style="color:#abb2bf;">    [RESET]</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;\033[0m&quot;
+</span><span style="color:#abb2bf;">)
+</span><span style="color:#abb2bf;">
+</span><span style="color:#cd74e8;">declare </span><span style="color:#eb6772;">-A LOG_CONFIG</span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;">(
+</span><span style="color:#abb2bf;">    [enabled]</span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;">true
+</span><span style="color:#abb2bf;">    [dir]</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;$</span><span style="color:#eb6772;">LOG_DIR</span><span style="color:#9acc76;">&quot;
+</span><span style="color:#abb2bf;">    [prefix]</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;startLog&quot;
+</span><span style="color:#abb2bf;">    [level]</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;INFO&quot;
+</span><span style="color:#abb2bf;">    [max_days]</span><span style="color:#adb7c9;">=</span><span style="color:#abb2bf;">30
+</span><span style="color:#abb2bf;">    [file]</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;&quot;
+</span><span style="color:#abb2bf;">)
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 日志系统初始化
+</span><span style="color:#5cb3fa;">init_logger</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">local </span><span style="color:#eb6772;">timestamp</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">$(</span><span style="color:#eb6772;">date </span><span style="color:#9acc76;">&#39;+%Y-%m-%d&#39;)
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">LOG_CONFIG[file]</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">LOG_CONFIG[dir]</span><span style="color:#9acc76;">}/${</span><span style="color:#eb6772;">LOG_CONFIG[prefix]</span><span style="color:#9acc76;">}_${</span><span style="color:#eb6772;">timestamp</span><span style="color:#9acc76;">}.log&quot;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">mkdir -p </span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">LOG_CONFIG[dir]</span><span style="color:#9acc76;">}&quot; </span><span style="color:#adb7c9;">|| </span><span style="color:#cd74e8;">return</span><span style="color:#abb2bf;"> 1
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">touch </span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">LOG_CONFIG[file]</span><span style="color:#9acc76;">}&quot; </span><span style="color:#adb7c9;">|| </span><span style="color:#cd74e8;">return</span><span style="color:#abb2bf;"> 1
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;"># 清理旧日志
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">find </span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">LOG_CONFIG[dir]</span><span style="color:#9acc76;">}&quot;</span><span style="color:#eb6772;"> -name </span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">LOG_CONFIG[prefix]</span><span style="color:#9acc76;">}_*.log&quot;</span><span style="color:#eb6772;"> -type</span><span style="color:#abb2bf;"> f \
+</span><span style="color:#eb6772;">        -mtime</span><span style="color:#abb2bf;"> +${</span><span style="color:#eb6772;">LOG_CONFIG[max_days]</span><span style="color:#abb2bf;">}</span><span style="color:#eb6772;"> -delete </span><span style="color:#db9d63;">2</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;">/dev/null
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 日志函数
+</span><span style="color:#5cb3fa;">log</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">local </span><span style="color:#eb6772;">level</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">$</span><span style="color:#eb6772;">1 msg</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">$</span><span style="color:#eb6772;">2 to_file</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">${</span><span style="color:#eb6772;">3</span><span style="color:#adb7c9;">:-</span><span style="color:#9acc76;">true}
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">local </span><span style="color:#eb6772;">timestamp</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">$(</span><span style="color:#eb6772;">date </span><span style="color:#9acc76;">&#39;+%Y-%m-%d %H:%M:%S&#39;)
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">local </span><span style="color:#eb6772;">log_msg</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;$</span><span style="color:#eb6772;">timestamp</span><span style="color:#9acc76;"> [$</span><span style="color:#eb6772;">level</span><span style="color:#9acc76;">] $</span><span style="color:#eb6772;">msg</span><span style="color:#9acc76;">&quot;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;"># 控制台输出
+</span><span style="color:#abb2bf;">    </span><span style="color:#5ebfcc;">printf </span><span style="color:#9acc76;">&quot;%b\n&quot; &quot;${</span><span style="color:#eb6772;">LOG_COLORS[$level]</span><span style="color:#9acc76;">}${</span><span style="color:#eb6772;">log_msg</span><span style="color:#9acc76;">}${</span><span style="color:#eb6772;">LOG_COLORS[RESET]</span><span style="color:#9acc76;">}&quot;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="font-style:italic;color:#5f697a;"># 文件输出
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">${to_file} </span><span style="color:#adb7c9;">&amp;&amp; </span><span style="color:#eb6772;">${LOG_CONFIG[enabled]} </span><span style="color:#adb7c9;">&amp;&amp; </span><span style="color:#5ebfcc;">printf </span><span style="color:#9acc76;">&quot;%b\n&quot; &quot;$</span><span style="color:#eb6772;">log_msg</span><span style="color:#9acc76;">&quot; </span><span style="color:#adb7c9;">&gt;&gt; </span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">LOG_CONFIG[file]</span><span style="color:#9acc76;">}&quot;
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#5cb3fa;">debug</span><span style="color:#abb2bf;">() { </span><span style="color:#eb6772;">log </span><span style="color:#9acc76;">&quot;DEBUG&quot; &quot;$</span><span style="color:#eb6772;">1</span><span style="color:#9acc76;">&quot; &quot;${</span><span style="color:#eb6772;">2</span><span style="color:#adb7c9;">:-</span><span style="color:#9acc76;">true}&quot;</span><span style="color:#adb7c9;">; </span><span style="color:#abb2bf;">}
+</span><span style="color:#5cb3fa;">info</span><span style="color:#abb2bf;">()  { </span><span style="color:#eb6772;">log </span><span style="color:#9acc76;">&quot;INFO&quot;  &quot;$</span><span style="color:#eb6772;">1</span><span style="color:#9acc76;">&quot; &quot;${</span><span style="color:#eb6772;">2</span><span style="color:#adb7c9;">:-</span><span style="color:#9acc76;">true}&quot;</span><span style="color:#adb7c9;">; </span><span style="color:#abb2bf;">}
+</span><span style="color:#5cb3fa;">warn</span><span style="color:#abb2bf;">()  { </span><span style="color:#eb6772;">log </span><span style="color:#9acc76;">&quot;WARN&quot;  &quot;$</span><span style="color:#eb6772;">1</span><span style="color:#9acc76;">&quot; &quot;${</span><span style="color:#eb6772;">2</span><span style="color:#adb7c9;">:-</span><span style="color:#9acc76;">true}&quot;</span><span style="color:#adb7c9;">; </span><span style="color:#abb2bf;">}
+</span><span style="color:#5cb3fa;">error</span><span style="color:#abb2bf;">() { </span><span style="color:#eb6772;">log </span><span style="color:#9acc76;">&quot;ERROR&quot; &quot;$</span><span style="color:#eb6772;">1</span><span style="color:#9acc76;">&quot; &quot;${</span><span style="color:#eb6772;">2</span><span style="color:#adb7c9;">:-</span><span style="color:#9acc76;">true}&quot;</span><span style="color:#adb7c9;">; </span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 进程管理函数
+</span><span style="color:#5cb3fa;">is_running</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">local </span><span style="color:#eb6772;">show_details</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">${</span><span style="color:#eb6772;">1</span><span style="color:#adb7c9;">:-</span><span style="color:#9acc76;">false}
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">if </span><span style="color:#eb6772;">$show_details</span><span style="color:#adb7c9;">; </span><span style="color:#cd74e8;">then
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">jps -l </span><span style="color:#adb7c9;">| </span><span style="color:#eb6772;">grep </span><span style="color:#9acc76;">&quot;$</span><span style="color:#eb6772;">JAR_NAME</span><span style="color:#9acc76;">&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">else
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">jps -l </span><span style="color:#adb7c9;">| </span><span style="color:#eb6772;">grep -q </span><span style="color:#9acc76;">&quot;$</span><span style="color:#eb6772;">JAR_NAME</span><span style="color:#9acc76;">&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fi
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#5cb3fa;">check_port</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">local </span><span style="color:#eb6772;">port</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">${</span><span style="color:#eb6772;">1</span><span style="color:#adb7c9;">:?</span><span style="color:#9acc76;">}
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">if </span><span style="color:#eb6772;">timeout</span><span style="color:#abb2bf;"> 5 bash</span><span style="color:#eb6772;"> -c </span><span style="color:#9acc76;">&quot;echo -n &gt; /dev/tcp/127.0.0.1/$</span><span style="color:#eb6772;">port</span><span style="color:#9acc76;">&quot; </span><span style="color:#db9d63;">2</span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;">/dev/null</span><span style="color:#adb7c9;">; </span><span style="color:#cd74e8;">then
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">info </span><span style="color:#9acc76;">&quot;Port $</span><span style="color:#eb6772;">port</span><span style="color:#9acc76;"> is accessible&quot;</span><span style="color:#abb2bf;"> false
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">return</span><span style="color:#abb2bf;"> 0
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">else
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">error </span><span style="color:#9acc76;">&quot;Port $</span><span style="color:#eb6772;">port</span><span style="color:#9acc76;"> is not accessible&quot;</span><span style="color:#abb2bf;"> false
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">return</span><span style="color:#abb2bf;"> 1
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fi
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#5cb3fa;">start_app</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">! </span><span style="color:#eb6772;">is_running</span><span style="color:#adb7c9;">; </span><span style="color:#cd74e8;">then
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">info </span><span style="color:#9acc76;">&quot;Starting $</span><span style="color:#eb6772;">APP_NAME</span><span style="color:#9acc76;">...&quot;
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">java </span><span style="color:#abb2bf;">${</span><span style="color:#eb6772;">JVM_OPTS[*]</span><span style="color:#abb2bf;">} ${</span><span style="color:#eb6772;">APP_OPTS[*]</span><span style="color:#abb2bf;">}</span><span style="color:#eb6772;"> -jar </span><span style="color:#9acc76;">&quot;$</span><span style="color:#eb6772;">JAR_PATH</span><span style="color:#9acc76;">&quot; </span><span style="color:#adb7c9;">&gt;&gt;</span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">LOG_CONFIG[file]</span><span style="color:#9acc76;">}&quot; </span><span style="color:#adb7c9;">&amp;
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">sleep</span><span style="color:#abb2bf;"> 2
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">is_running</span><span style="color:#abb2bf;"> true </span><span style="color:#adb7c9;">&amp;&amp; </span><span style="color:#eb6772;">info </span><span style="color:#9acc76;">&quot;Started successfully&quot; </span><span style="color:#adb7c9;">|| </span><span style="color:#eb6772;">error </span><span style="color:#9acc76;">&quot;Failed to start&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">else
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">warn </span><span style="color:#9acc76;">&quot;Application is already running&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fi
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#5cb3fa;">stop_app</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">info </span><span style="color:#9acc76;">&quot;Stopping $</span><span style="color:#eb6772;">APP_NAME</span><span style="color:#9acc76;">...&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">! </span><span style="color:#eb6772;">is_running</span><span style="color:#adb7c9;">; </span><span style="color:#cd74e8;">then
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">warn </span><span style="color:#9acc76;">&quot;Application is not running&quot;
+</span><span style="color:#abb2bf;">        </span><span style="color:#cd74e8;">return</span><span style="color:#abb2bf;"> 0
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fi
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">pkill -15 -f </span><span style="color:#9acc76;">&quot;$</span><span style="color:#eb6772;">JAR_NAME</span><span style="color:#9acc76;">&quot;
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">local </span><span style="color:#eb6772;">timeout</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">30
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">while </span><span style="color:#abb2bf;">((timeout </span><span style="color:#adb7c9;">&gt; </span><span style="color:#db9d63;">0</span><span style="color:#abb2bf;">))</span><span style="color:#adb7c9;">; </span><span style="color:#cd74e8;">do
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">is_running </span><span style="color:#adb7c9;">|| </span><span style="color:#abb2bf;">{ </span><span style="color:#eb6772;">info </span><span style="color:#9acc76;">&quot;Application stopped gracefully&quot;</span><span style="color:#adb7c9;">; </span><span style="color:#cd74e8;">return</span><span style="color:#abb2bf;"> 0</span><span style="color:#adb7c9;">; </span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">sleep</span><span style="color:#abb2bf;"> 1
+</span><span style="color:#abb2bf;">        ((timeout</span><span style="color:#adb7c9;">--</span><span style="color:#abb2bf;">))
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">done
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">warn </span><span style="color:#9acc76;">&quot;Force killing the application...&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">pkill -9 -f </span><span style="color:#9acc76;">&quot;$</span><span style="color:#eb6772;">JAR_NAME</span><span style="color:#9acc76;">&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">is_running </span><span style="color:#adb7c9;">|| </span><span style="color:#eb6772;">info </span><span style="color:#9acc76;">&quot;Application stopped forcefully&quot;
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#5cb3fa;">monitor_app</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">local </span><span style="color:#eb6772;">port</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">$</span><span style="color:#eb6772;">1
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">if </span><span style="color:#adb7c9;">! </span><span style="color:#eb6772;">is_running</span><span style="color:#adb7c9;">; </span><span style="color:#cd74e8;">then
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">error </span><span style="color:#9acc76;">&quot;Process not found, starting...&quot;
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">start_app
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">elif </span><span style="color:#adb7c9;">! </span><span style="color:#eb6772;">check_port </span><span style="color:#9acc76;">&quot;$</span><span style="color:#eb6772;">port</span><span style="color:#9acc76;">&quot;</span><span style="color:#adb7c9;">; </span><span style="color:#cd74e8;">then
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">error </span><span style="color:#9acc76;">&quot;Port $</span><span style="color:#eb6772;">port</span><span style="color:#9acc76;"> is not responding, restarting...&quot;
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">stop_app </span><span style="color:#adb7c9;">&amp;&amp; </span><span style="color:#eb6772;">start_app
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">else
+</span><span style="color:#abb2bf;">        </span><span style="color:#eb6772;">info </span><span style="color:#9acc76;">&quot;Application is running normally&quot;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">fi
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 主函数
+</span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
+</span><span style="color:#abb2bf;">    </span><span style="color:#eb6772;">init_logger </span><span style="color:#adb7c9;">|| </span><span style="color:#abb2bf;">{ </span><span style="color:#eb6772;">error </span><span style="color:#9acc76;">&quot;Failed to initialize logger&quot;</span><span style="color:#adb7c9;">; </span><span style="color:#5ebfcc;">exit</span><span style="color:#abb2bf;"> 1</span><span style="color:#adb7c9;">; </span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">case </span><span style="color:#9acc76;">&quot;$</span><span style="color:#eb6772;">1</span><span style="color:#9acc76;">&quot; </span><span style="color:#cd74e8;">in
+</span><span style="color:#abb2bf;">        start</span><span style="color:#cd74e8;">)      </span><span style="color:#eb6772;">start_app </span><span style="color:#abb2bf;">;;
+</span><span style="color:#abb2bf;">        stop</span><span style="color:#cd74e8;">)       </span><span style="color:#eb6772;">stop_app </span><span style="color:#abb2bf;">;;
+</span><span style="color:#abb2bf;">        restart</span><span style="color:#cd74e8;">)    </span><span style="color:#eb6772;">stop_app </span><span style="color:#adb7c9;">&amp;&amp; </span><span style="color:#eb6772;">start_app </span><span style="color:#abb2bf;">;;
+</span><span style="color:#abb2bf;">        status</span><span style="color:#cd74e8;">)     </span><span style="color:#eb6772;">is_running</span><span style="color:#abb2bf;"> true ;;
+</span><span style="color:#abb2bf;">        check</span><span style="color:#cd74e8;">)      </span><span style="color:#eb6772;">check_port </span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">2</span><span style="color:#adb7c9;">:?</span><span style="color:#9acc76;">Port required}&quot; </span><span style="color:#abb2bf;">;;
+</span><span style="color:#abb2bf;">        monitor</span><span style="color:#cd74e8;">)    </span><span style="color:#eb6772;">monitor_app </span><span style="color:#9acc76;">&quot;${</span><span style="color:#eb6772;">2</span><span style="color:#adb7c9;">:?</span><span style="color:#9acc76;">Port required}&quot; </span><span style="color:#abb2bf;">;;
+</span><span style="color:#abb2bf;">        </span><span style="color:#adb7c9;">*</span><span style="color:#cd74e8;">)
+</span><span style="color:#abb2bf;">            </span><span style="color:#5ebfcc;">echo </span><span style="color:#9acc76;">&quot;Usage: $</span><span style="color:#eb6772;">0</span><span style="color:#9acc76;"> {start|stop|restart|status|check|monitor} [port]&quot;
+</span><span style="color:#abb2bf;">            </span><span style="color:#5ebfcc;">exit</span><span style="color:#abb2bf;"> 1
+</span><span style="color:#abb2bf;">            ;;
+</span><span style="color:#abb2bf;">    </span><span style="color:#cd74e8;">esac
+</span><span style="color:#abb2bf;">}
+</span><span style="color:#abb2bf;">
+</span><span style="color:#eb6772;">main </span><span style="color:#9acc76;">&quot;$</span><span style="color:#eb6772;">@</span><span style="color:#9acc76;">&quot;
+</span></code></pre>
+</details>
+<p>使用：</p>
+<ol>
+<li>将脚本放在jar相同的目录中</li>
+<li>修改<code>APP_NAME</code>和<code>JAR_NAME</code>常量</li>
+<li>赋予755权限，执行<code>./javaapp-start.sh start</code>启动</li>
+</ol>
+<p>支持的参数：</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">./javaapp-start.sh start  # 启动
+</span><span style="color:#abb2bf;">./javaapp-start.sh stop   # 停止
+</span><span style="color:#abb2bf;">./javaapp-start.sh restart  # 重启
+</span><span style="color:#abb2bf;">./javaapp-start.sh status  # 查看状态
+</span><span style="color:#abb2bf;">./javaapp-start.sh check  # 检查端口和进程
+</span><span style="color:#abb2bf;">./javaapp-start.sh monitor  # 监控程序可以配合crontab来保活
+</span></code></pre>
+
+          </div>
+        </article>
+      </div>
+      
+      <div class="column is-2 is-hidden-mobile">
+        <aside class="menu" style="position: sticky; top: 48px">
+          <p class="heading has-text-weight-bold">Contents</p>
+          <ul class="menu-list">
+            
+          </ul>
+        </aside>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <nav class="level">
+              
+          <div class="level-item has-text-centered">
+            <a class="button is-black is-outlined" href="https:&#x2F;&#x2F;marigold233.github.io&#x2F;posts&#x2F;wo-de-linuxming-ling-bang-zhu-shou-ce&#x2F;">
+              <span class="icon mr-2">
+                <i class="fas fa-arrow-circle-left"></i>
+              </span>
+              我的linux命令帮助手册
+            </a>
+          </div>
+           
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+
+
+  
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/galleria.min.js" integrity="sha384-QSfwGT8/EU536DKdtyP2D6SLlh8zBaZ0cVkwfrwhqzIU9VCfJT00CLVP5t+HAiYg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/galleria@1.6.1/dist/themes/folio/galleria.folio.min.js" integrity="sha384-DwpKI+deZB267+hPKwiOIc5Y2GKsVL0mR6hgz7GgIu7AgAMYqJwcJKY1YBNfhWcY" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.13.5/dist/mermaid.min.js" integrity="sha384-0yWn54pSGtfKCU+skfA69l25VsCw+MZt4LQov3xNRoS7YkAMrFokGgSBnAWSK4pv" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js" integrity="sha384-xC3h1+IHXK8seA+8KfT79Z4e0GPsznjXBoMa5nd8ooWKplPyXx92NOmljWxLC/cs" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://marigold233.github.io/elasticlunr.min.js"></script>
+  <script src="https://marigold233.github.io/search_index.en.js"></script><script src="https://marigold233.github.io/js/site.js"></script>
+
+  
+
+<script type="text/javascript">
+  const menuBarHeight = document.querySelector("nav.navbar").clientHeight;
+  const tocItems = document.querySelectorAll(".toc");
+  const navSections = new Array(tocItems.length);
+
+  tocItems.forEach((el, i) => {
+    let id = el.getAttribute("id").substring(5);
+    navSections[i] = document.getElementById(id);
+  })
+
+  function isVisible(tocIndex) {
+    const current = navSections[tocIndex];
+    const next = tocIndex < tocItems.length - 1 ? navSections[tocIndex + 1]
+      : document.querySelectorAll("section.section").item(1);
+
+    const c = current.getBoundingClientRect();
+    const n = next.getBoundingClientRect();
+    const h = (window.innerHeight || document.documentElement.clientHeight);
+
+    return (c.top <= h) && (n.top - menuBarHeight >= 0);
+  }
+
+  function activateIfVisible() {
+    for (b = true, i = 0; i < tocItems.length; i++) {
+      if (b && isVisible(i)) {
+        tocItems[i].classList.add('is-active');
+        b = false;
+      } else
+        tocItems[i].classList.remove('is-active');
+    }
+  }
+
+  var isTicking = null;
+  window.addEventListener('scroll', () => {
+    if (!isTicking) {
+      window.requestAnimationFrame(() => {
+        activateIfVisible();
+        isTicking = false;
+      });
+      isTicking = true;
+    }
+  }, false);
+</script>
+
+
+
+
+
+  
+  
+</body>
+
+</html>
